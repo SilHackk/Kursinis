@@ -150,7 +150,7 @@ def summarize_expenses(expense_file_path, user, remove=False, observer=None):
     print(f"Remaining Monthly Budget: ${user.monthly_limit.limit_amount - total_spent:.2f}")
 
     if observer:
-        observer.notify(red("Budget limit exceeded"))
+        observer.notify("Expenses have been summarized.")
 
     if remove:
         expense_name_to_remove = input("Enter the name of the expense to remove: ").strip()
